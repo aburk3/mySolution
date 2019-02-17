@@ -43,10 +43,8 @@ public class Solution {
          * If the upperCase variable was never set to true, no upperCase char exists, so return -1
          */
         if (upperCase == false || myCount.isEmpty()) {
-            System.out.println("-1");
             return -1;
         } else {
-            System.out.println(Collections.max(myCount));
             return Collections.max(myCount);
         }
     }
