@@ -15,23 +15,33 @@ public class Solution {
         String subString = "";
         ArrayList<Integer> myCount = new ArrayList<Integer>();
 
+        /**
+         * Created upperCase variable to switch if it is validated - otherwise, will return -1
+         */
         boolean upperCase = false;
-        boolean number = false;
 
+        /**
+         * Loop through each character of the string that is passed in
+         */
         for (int i = 0; i < myString.length(); i++){
+
+            // if character is a digit, add the current substrings length to the ArrayList, and reset the substring
             if (Character.isDigit(myString.charAt(i))) {
                 myCount.add(subString.length());
                 subString = "";
+                // if the character is uppercase, set upperCase to true and add the character to the substring
             } else if (Character.isUpperCase(myString.charAt(i))) {
                 subString += myString.charAt(i);
                 upperCase = true;
+                // if the character is lowercase, add the character to the substring
             } else if (Character.isLowerCase(myString.charAt(i))) {
                 subString += myString.charAt(i);
             }
-
         }
 
-
+        /**
+         * If the upperCase variable was never set to true, no upperCase char exists, so return -1
+         */
         if (upperCase == false || myCount.isEmpty()) {
             System.out.println("-1");
             return -1;
