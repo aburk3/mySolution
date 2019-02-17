@@ -44,9 +44,11 @@ public class Solution {
 
         /**
          * If the upperCase variable was never set to true, no upperCase char exists, so return -1
+         * If myCount is empty, then no lowercase or uppercase chars existed in the initial string, so return -1
          */
         if (upperCase == false || myCount.isEmpty()) {
             return -1;
+            // a substring existed, so return the longest substring
         } else {
             return Collections.max(myCount);
         }
