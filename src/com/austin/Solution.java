@@ -5,6 +5,9 @@ import java.util.*;
 public class Solution {
 
     public static void main(String[] args){
+        /**
+         * Test passwords, some that include digits, some that include uppercase chars
+         */
         new Solution().doSomething("a0B0a");    // 1
         new Solution().doSomething("a0nUaB0a"); // 4
         new Solution().doSomething("101");      // -1
